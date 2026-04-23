@@ -1,11 +1,15 @@
 # Data Preparation
 
-Datasets are not included in this repository. Some raw and processed graph
-files are large, and generated PyTorch Geometric artifacts should not be
-committed to Git.
+The datasets are not included in this repository because the raw files and
+processed graph artifacts can be large and are not suitable for a normal GitHub
+repository.
 
-Create a `data/` directory in the project root and place datasets under the
-following layout:
+Please prepare the datasets locally and place them under the `data/` directory
+in the project root. The `data/` directory is intentionally ignored by Git, so
+local datasets and generated PyTorch Geometric `processed/` files will not be
+committed.
+
+Expected layout:
 
 ```text
 data/
@@ -38,7 +42,12 @@ The DBLP and IMDB datasets are loaded through PyTorch Geometric:
 from torch_geometric.datasets import DBLP, IMDB
 ```
 
-After the raw files are placed correctly, run training from the project root:
+For ACM, AMiner, and Freebase, download or prepare the corresponding raw files
+from the original dataset sources and place them in the matching `raw/`
+directory shown above.
+
+After the raw files are placed correctly, run training from the project root.
+For example:
 
 ```bash
 python main.py --dataset acm --gpu 0
