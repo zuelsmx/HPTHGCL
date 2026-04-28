@@ -1,4 +1,4 @@
-# HPT-HGCL
+# Hyper-Top
 
 Training code for heterogeneous graph contrastive learning.
 
